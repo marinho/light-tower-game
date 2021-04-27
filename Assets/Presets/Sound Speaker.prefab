@@ -228,6 +228,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mouseOverOutlineMaterial: {fileID: 2100000, guid: 709509a6bcb3648d6be2b060f9e0ffda, type: 2}
+  mouseOverColor: {r: 0, g: 0.62142706, b: 1, a: 0}
   screenToShow: {fileID: 0}
   isActive: 1
 --- !u!61 &8756194860301118749

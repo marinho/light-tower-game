@@ -25,13 +25,10 @@ public class Player : MonoBehaviour
     private bool isJumping;
     private float jumpTimeCounter;
 
-    // Start is called before the first frame update
     void Start()
     {
         rigidBody = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
-        // animator.SetFloat("moveX", 0);
-        // animator.SetFloat("moveY", -1);
     }
 
     void Update() {
@@ -39,33 +36,31 @@ public class Player : MonoBehaviour
 
         if (isGrounded && Input.GetButtonDown("Jump")) {
             isJumping = true;
-            animator.SetBool("jumping", true);
             jumpTimeCounter = jumpTime;
             rigidBody.velocity = Vector2.up * jumpForce;
         }
 
-        if (Input.GetButton("Jump") && isJumping) {
+        if (isJumping && Input.GetButton("Jump")) {
             if (jumpTimeCounter > 0) {
                 rigidBody.velocity = Vector2.up * jumpForce;
                 jumpTimeCounter -= Time.deltaTime;
             } else {
                 isJumping = false;
-                animator.SetBool("jumping", false);
             }
         }
 
         if (Input.GetButtonUp("Jump")) {
             isJumping = false;
-            animator.SetBool("jumping", false);
         }
     }
 
-    // Update is called once per frame
     void FixedUpdate()
     {
-        // change = Vector3.zero;
         moveInput = Input.GetAxisRaw("Horizontal");
-        // change.y = Input.GetAxisRaw("Vertical");
+
+        animator.SetBool("isFalling", rigidBody.velocity.y < 0);
+        animator.SetBool("isJumping", rigidBody.velocity.y > 0);
+        animator.SetBool("isMoving", rigidBody.velocity.x != 0);
 
         UpdateAnimationAndMove();
     }
@@ -75,12 +70,6 @@ public class Player : MonoBehaviour
         if (moveInput != 0)
         {
             MoveCharacter();
-            animator.SetFloat("moveX", moveInput);
-            animator.SetBool("moving", true);
-        }
-        else
-        {
-            animator.SetBool("moving", false);
         }
     }
 
@@ -90,14 +79,6 @@ public class Player : MonoBehaviour
         transform.rotation = Quaternion.Euler(0, direction, 0);
 
         rigidBody.velocity = new Vector2(moveInput * speed, rigidBody.velocity.y);
-
-        // change.Normalize();
-
-        // int direction = change.x < 0 ? 180 : 0;
-        // transform.rotation = Quaternion.Euler(0, direction, 0);
-
-        // myRigidbody.MovePosition(
-        //     transform.position + change * speed * Time.deltaTime
-        // );
     }
+
 }

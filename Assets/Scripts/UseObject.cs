@@ -21,11 +21,11 @@ public class UseObject : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Player") && mouseOverOutlineMaterial != null && isActive)
+        if (other.CompareTag("Player") && isActive)
         {
-            var spriteRenderer = GetSpriteRenderer();
-            initialMaterial = spriteRenderer.material;
-            spriteRenderer.material = mouseOverOutlineMaterial;
+        //     var spriteRenderer = GetSpriteRenderer();
+        //     initialMaterial = spriteRenderer.material;
+        //     spriteRenderer.material = mouseOverOutlineMaterial;
             playerInRange = true;
         }
     }
@@ -34,8 +34,9 @@ public class UseObject : MonoBehaviour
     {
         if (other.CompareTag("Player") && isActive)
         {
-            var spriteRenderer = GetSpriteRenderer();
-            spriteRenderer.material = initialMaterial;
+            // var spriteRenderer = GetSpriteRenderer();
+            // spriteRenderer.color = initialColor;
+            // spriteRenderer.material = initialMaterial;
             playerInRange = false;
         }
     }
