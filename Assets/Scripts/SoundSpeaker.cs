@@ -24,7 +24,6 @@ public class SoundSpeaker : MonoBehaviour
     {
         // Fire1 = Square
         // Fire2 = X
-        // Fire3 = Circle
         if (Input.GetButtonUp("Use") && playerInRange) {
             isPlaying = !isPlaying;
             UpdatePlayingState();
