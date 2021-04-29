@@ -17,6 +17,7 @@ public class Player : MonoBehaviour
     [SerializeField]  float jumpForce;
     [SerializeField] float jumpTime;
     [SerializeField] Transform respawnLocation;
+    [SerializeField] GameObject currentWeapon;
 
     //private PlayerState currentState = PlayerState.idle;
     private float moveInput;
@@ -56,14 +57,26 @@ public class Player : MonoBehaviour
         if (Input.GetButtonUp("Jump")) {
             isJumping = false;
         }
+
+        if (Input.GetButtonDown("Attack")) {
+            currentWeapon.GetComponent<Animator>().SetBool("isActive", true);
+            currentWeapon.GetComponent<Weapon>().AttackFirstTarget();
+        }
+        else if (Input.GetButtonUp("Attack")) {
+            currentWeapon.GetComponent<Animator>().SetBool("isActive", false);
+        }
+
+        if (Input.GetButtonDown("Use")) {
+            // TODO
+        }
     }
 
     void FixedUpdate()
     {
         moveInput = Input.GetAxisRaw("Horizontal");
 
-        animator.SetBool("isFalling", rigidBody.velocity.y < 0);
-        animator.SetBool("isJumping", rigidBody.velocity.y > 0);
+        animator.SetBool("isFalling", rigidBody.velocity.y < -0.1f);
+        animator.SetBool("isJumping", rigidBody.velocity.y > 0.1f);
         animator.SetBool("isMoving", rigidBody.velocity.x != 0);
 
         UpdateAnimationAndMove();
@@ -81,7 +94,6 @@ public class Player : MonoBehaviour
     {
         int direction = moveInput < 0 ? 180 : 0;
         transform.rotation = Quaternion.Euler(0, direction, 0);
-
         rigidBody.velocity = new Vector2(moveInput * speed, rigidBody.velocity.y);
     }
 
