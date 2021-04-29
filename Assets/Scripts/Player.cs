@@ -16,6 +16,7 @@ public class Player : MonoBehaviour
     [SerializeField] LayerMask whatIsGround;
     [SerializeField]  float jumpForce;
     [SerializeField] float jumpTime;
+    [SerializeField] Transform respawnLocation;
 
     //private PlayerState currentState = PlayerState.idle;
     private float moveInput;
@@ -29,6 +30,9 @@ public class Player : MonoBehaviour
     {
         rigidBody = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+
+        // FIXME: it's not working
+        transform.position = Vector3.MoveTowards(transform.position, respawnLocation.position, 0);
     }
 
     void Update() {
