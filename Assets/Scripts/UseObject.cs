@@ -4,18 +4,22 @@ using UnityEngine;
 
 public class UseObject : MonoBehaviour
 {
-    public Material mouseOverOutlineMaterial;
-    public GameObject screenToShow;
-    public bool isActive = true;
+    [SerializeField] GameObject screenToShow;
+    [SerializeField] bool isActive = true;
+    [SerializeField] UIControlPad uiControlPad;
 
     private bool playerInRange = false;
     private Material initialMaterial;
 
     private void Update()
     {
-        if (Input.GetKey(KeyCode.Space))
+        if (Input.GetButtonUp("Use") && playerInRange)
         {
-            ShowAttachedScreen();
+            if (screenToShow != null) {
+                ShowAttachedScreen();
+            } else if (gameObject.GetComponent<SoundSpeaker>() != null) {
+                gameObject.GetComponent<SoundSpeaker>().Use();
+            }
         }
     }
 
@@ -23,10 +27,8 @@ public class UseObject : MonoBehaviour
     {
         if (other.CompareTag("Player") && isActive)
         {
-        //     var spriteRenderer = GetSpriteRenderer();
-        //     initialMaterial = spriteRenderer.material;
-        //     spriteRenderer.material = mouseOverOutlineMaterial;
             playerInRange = true;
+            uiControlPad.SetCircleEnabled(playerInRange);
         }
     }
 
@@ -34,24 +36,14 @@ public class UseObject : MonoBehaviour
     {
         if (other.CompareTag("Player") && isActive)
         {
-            // var spriteRenderer = GetSpriteRenderer();
-            // spriteRenderer.color = initialColor;
-            // spriteRenderer.material = initialMaterial;
             playerInRange = false;
-        }
-    }
-
-    private void OnMouseDown()
-    {
-        if (isActive)
-        {
-            ShowAttachedScreen();
+            uiControlPad.SetCircleEnabled(playerInRange);
         }
     }
 
     private void ShowAttachedScreen()
     {
-        if (playerInRange && screenToShow != null && isActive)
+        if (playerInRange && isActive)
         {
             screenToShow.SetActive(true);
         }

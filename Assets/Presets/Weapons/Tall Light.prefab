@@ -155,11 +155,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2851904669002851392, guid: aaa24216aebb341549d0eaf80ee72ae0, type: 3}
       propertyPath: addSize
-      value: 0.0029
+      value: 0.0063
       objectReference: {fileID: 0}
     - target: {fileID: 2851904669002851392, guid: aaa24216aebb341549d0eaf80ee72ae0, type: 3}
       propertyPath: flickTime
-      value: 0.008
+      value: 0.052
       objectReference: {fileID: 0}
     - target: {fileID: 2851904669002851393, guid: aaa24216aebb341549d0eaf80ee72ae0, type: 3}
       propertyPath: m_RootOrder
@@ -167,11 +167,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2851904669002851393, guid: aaa24216aebb341549d0eaf80ee72ae0, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2851904669002851393, guid: aaa24216aebb341549d0eaf80ee72ae0, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2851904669002851393, guid: aaa24216aebb341549d0eaf80ee72ae0, type: 3}
       propertyPath: m_LocalPosition.x

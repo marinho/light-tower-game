@@ -11,6 +11,7 @@ public class Weapon : MonoBehaviour
 
     List<GameObject> targetsInRange;
     GameObject attackedTarget;
+    GameObject attackEffectClone;
 
     void Awake() {
         targetsInRange = new List<GameObject>();
@@ -22,15 +23,15 @@ public class Weapon : MonoBehaviour
         }
         attackedTarget = targetsInRange[0];
 
-        attackEffect.transform.position = attackEffectOrigin.position;
-        attackEffect.SetActive(true);
+        attackEffectClone = Instantiate(attackEffect, attackEffectOrigin.position, Quaternion.identity);
+        attackEffectClone.SetActive(true);
     }
 
     void Update() {
         if (attackedTarget != null && attackEffect != null) {
-            if (attackEffect.transform.position != attackedTarget.transform.position) {
-                attackEffect.transform.position = Vector3.MoveTowards(
-                    attackEffect.transform.position,
+            if (attackEffectClone.transform.position != attackedTarget.transform.position) {
+                attackEffectClone.transform.position = Vector3.MoveTowards(
+                    attackEffectClone.transform.position,
                     attackedTarget.transform.position,
                     10 * Time.deltaTime
                 );
@@ -38,7 +39,9 @@ public class Weapon : MonoBehaviour
                 var targetInfo = attackedTarget.GetComponent<TargetObject>();
                 targetInfo.Attack();
                 attackedTarget = null;
-                attackEffect.SetActive(false);
+                attackEffectClone.SetActive(false);
+                Destroy(attackEffectClone);
+                attackEffectClone = null;
             }
         }
     }

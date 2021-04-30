@@ -29,19 +29,19 @@ public class UIControlPad : MonoBehaviour
         controlCircle.GetComponent<Animator>().SetBool("isEnabled", circleIsEnabled);
     }
 
-    public void SetSquareEnable(bool enable) {
+    public void SetSquareEnabled(bool enable) {
         squareIsEnabled = enable;
     }
 
-    public void SetXEnable(bool enable) {
+    public void SetXEnabled(bool enable) {
         xIsEnabled = enable;
     }
 
-    public void SetTriangleEnable(bool enable) {
+    public void SetTriangleEnabled(bool enable) {
         triangleIsEnabled = enable;
     }
 
-    public void SetCircleEnable(bool enable) {
+    public void SetCircleEnabled(bool enable) {
         circleIsEnabled = enable;
     }
 }
