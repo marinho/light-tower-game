@@ -8,23 +8,25 @@ public class SoundSpeaker : MonoBehaviour
 
     static float highSoundVolume = .5f;
     static float lowSoundVolume = .0f;
-    private AudioSource audioSource;
-    private Animator animator;
 
     void Start()
     {
-        audioSource = GetComponent<AudioSource>();
-        animator = GetComponent<Animator>();
+        // UpdatePlayingState();
+    }
+
+    void Update() {
         UpdatePlayingState();
     }
 
     public void Use()
     {
         isPlaying = !isPlaying;
-        UpdatePlayingState();
+        // UpdatePlayingState();
     }
 
     void UpdatePlayingState() {
+        var audioSource = GetComponent<AudioSource>();
+        var animator = GetComponent<Animator>();
         audioSource.volume = isPlaying ? highSoundVolume : lowSoundVolume;
         animator.SetBool("isPlaying", isPlaying);
     }

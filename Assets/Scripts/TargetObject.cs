@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class TargetObject : MonoBehaviour
 {
     [SerializeField] LightSpot lightSpot;
     [SerializeField] GameObject objectToShowAfterAttack;
+    [SerializeField] UnityEvent onAttack;
 
     void Awake() {
         lightSpot.gameObject.SetActive(false);
@@ -15,5 +17,6 @@ public class TargetObject : MonoBehaviour
     public void Attack() {
         lightSpot.gameObject.SetActive(true);
         objectToShowAfterAttack.gameObject.SetActive(true);
+        onAttack.Invoke();
     }
 }

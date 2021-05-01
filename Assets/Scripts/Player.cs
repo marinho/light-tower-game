@@ -17,7 +17,7 @@ public class Player : MonoBehaviour
     [SerializeField]  float jumpForce;
     [SerializeField] float jumpTime;
     [SerializeField] Transform respawnLocation;
-    [SerializeField] GameObject currentWeapon;
+    [SerializeField] WeaponHandler weaponHandler;
 
     //private PlayerState currentState = PlayerState.idle;
     private float moveInput;
@@ -26,6 +26,7 @@ public class Player : MonoBehaviour
     private bool isGrounded;
     private bool isJumping;
     private float jumpTimeCounter;
+    bool movementIsEnabled = true;
 
     void Start()
     {
@@ -37,6 +38,12 @@ public class Player : MonoBehaviour
     }
 
     void Update() {
+        weaponHandler.gameObject.SetActive(weaponHandler.currentWeapon != null);
+
+        if (!movementIsEnabled) {
+            return;
+        }
+
         isGrounded = Physics2D.OverlapCircle(feetPosition.position, checkRadius, whatIsGround);
 
         if (isGrounded && Input.GetButtonDown("Jump")) {
@@ -58,12 +65,15 @@ public class Player : MonoBehaviour
             isJumping = false;
         }
 
-        if (Input.GetButtonDown("Attack")) {
-            currentWeapon.GetComponent<Animator>().SetBool("isActive", true);
-            currentWeapon.GetComponent<Weapon>().AttackFirstTarget();
-        }
-        else if (Input.GetButtonUp("Attack")) {
-            currentWeapon.GetComponent<Animator>().SetBool("isActive", false);
+        var currentWeapon = weaponHandler.GetCurrentWeapon();
+        if (currentWeapon != null) {
+            if (Input.GetButtonDown("Attack")) {
+                currentWeapon.GetComponent<Animator>().SetBool("isActive", true);
+                currentWeapon.GetComponent<Weapon>().AttackFirstTarget();
+            }
+            else if (Input.GetButtonUp("Attack")) {
+                currentWeapon.GetComponent<Animator>().SetBool("isActive", false);
+            }
         }
 
         if (Input.GetButtonDown("Use")) {
@@ -73,6 +83,10 @@ public class Player : MonoBehaviour
 
     void FixedUpdate()
     {
+        if (!movementIsEnabled) {
+            return;
+        }
+
         moveInput = Input.GetAxisRaw("Horizontal");
 
         animator.SetBool("isFalling", rigidBody.velocity.y < -0.1f);
@@ -95,6 +109,17 @@ public class Player : MonoBehaviour
         int direction = moveInput < 0 ? 180 : 0;
         transform.rotation = Quaternion.Euler(0, direction, 0);
         rigidBody.velocity = new Vector2(moveInput * speed, rigidBody.velocity.y);
+    }
+
+    public void EnablePlayerMovements() {
+        movementIsEnabled = true;
+    }
+
+    public void DisablePlayerMovements() {
+        movementIsEnabled = false;
+        animator.SetBool("isFalling", false);
+        animator.SetBool("isJumping", false);
+        animator.SetBool("isMoving", false);
     }
 
 }
