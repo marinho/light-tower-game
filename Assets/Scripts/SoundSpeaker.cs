@@ -9,11 +9,6 @@ public class SoundSpeaker : MonoBehaviour
     static float highSoundVolume = .5f;
     static float lowSoundVolume = .0f;
 
-    void Start()
-    {
-        // UpdatePlayingState();
-    }
-
     void Update() {
         UpdatePlayingState();
     }
@@ -21,7 +16,6 @@ public class SoundSpeaker : MonoBehaviour
     public void Use()
     {
         isPlaying = !isPlaying;
-        // UpdatePlayingState();
     }
 
     void UpdatePlayingState() {

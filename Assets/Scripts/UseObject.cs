@@ -34,9 +34,10 @@ public class UseObject : MonoBehaviour
         {
             if (screenToShow != null) {
                 if (!screenToShow.activeInHierarchy) {
-                    ShowAttachedScreen();
                     if (screenToShow.GetComponent<Dialogue>() != null) {
                         screenToShow.GetComponent<Dialogue>().StartDialogue();
+                    } else {
+                        ShowAttachedScreen();
                     }
                 }
             } else if (gameObject.GetComponent<SoundSpeaker>() != null) {

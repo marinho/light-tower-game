@@ -21,6 +21,12 @@ public class Dialogue : MonoBehaviour
 
     private int currentSentence = -1;
 
+    void Awake() {
+        foreach (var box in GetComponentsInChildren<DialogeBox>()) {
+            box.gameObject.SetActive(false);
+        }
+    }
+
     void Update()
     {
         if (!gameObject.activeInHierarchy) {
@@ -28,9 +34,6 @@ public class Dialogue : MonoBehaviour
         }
 
         if (Input.GetButtonUp("Talk")) {
-            if (currentSentence >= 0) {
-                sentences[currentSentence].uiObject.SetActive(false);
-            }
             if (sentences.Count > currentSentence + 1) {
                 NextSentence();
             } else {
@@ -40,11 +43,18 @@ public class Dialogue : MonoBehaviour
     }
 
     void NextSentence() {
+        HideCurrentSentence();
         currentSentence++;
         var sentence = sentences[currentSentence];
         sentence.uiObject.SetActive(true);
         var dialogueBox = sentences[currentSentence].uiObject.GetComponent<DialogeBox>();
         dialogueBox.DisplayText(sentence.text, sentence.sprite);
+    }
+
+    void HideCurrentSentence() {
+        if (currentSentence >= 0) {
+            sentences[currentSentence].uiObject.SetActive(false);
+        }
     }
 
     public void StartDialogue() {
@@ -54,6 +64,7 @@ public class Dialogue : MonoBehaviour
     }
 
     public void EndDialogue() {
+        HideCurrentSentence();
         gameObject.SetActive(false);
         onEnd.Invoke();
     }
