@@ -12,6 +12,7 @@ public class NPC : MonoBehaviour
     [SerializeField] [Range(0f, 1f)] float randomSayingThreshold = .1f;
     [SerializeField] Vector3 offset;
     [SerializeField] Camera usedCamera;
+    [SerializeField] public SoundSpeaker soundSpeaker;
 
 
     float randomSayingTimeCounter;
