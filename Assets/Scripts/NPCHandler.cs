@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class NPCHandler : MonoBehaviour
 {
+    public void IncreaseSongPoints() {
+        // TODO
+    }
+
     // Bassist
 
     [SerializeField] GameObject bassistIdle;
@@ -22,6 +26,7 @@ public class NPCHandler : MonoBehaviour
         bassistIdle.SetActive(false);
         bassistPlaying.SetActive(true);
         var soundSpeaker = bassistPlaying.GetComponent<NPC>().soundSpeaker;
+        // TODO: set drums soundSpeaker visible
         if (soundSpeaker != null) {
             soundSpeaker.Use();
         }
@@ -31,10 +36,28 @@ public class NPCHandler : MonoBehaviour
 
     [SerializeField] GameObject papaCapimIdle;
     [SerializeField] GameObject papaCapimPlaying;
+    [SerializeField] GameObject seedeaterBird;
     [SerializeField] GameObject secondDialogueForPapaCapimIdle;
 
     public void UnsetDialogueForPapaCapimIdle() {
         papaCapimIdle.GetComponent<UseObject>().SetScreenToShow(null);
+    }
+
+    public void EnableSeedeaterBirdAndPianoSoundSpeaker() {
+        seedeaterBird.SetActive(true);
+        // TODO: set piano soundSpeaker visible
+    }
+
+    public void BirdWasCaught() {
+        var npc = papaCapimIdle.GetComponent<NPC>();
+
+        var newSayings = new List<string>();
+        newSayings.Add("Oh, bird of my dreams! You are back!");
+        newSayings.Add("Talk to me, girl? He is back! It's sooo much happiness!");
+
+        npc.randomSayings = newSayings;
+        npc.DestroyRandomSayingTextDisplay();
+        npc.ShowRandomSaying();
     }
 
     public void SetSecondDialogueForPapaCapimIdle() {
@@ -44,9 +67,6 @@ public class NPCHandler : MonoBehaviour
     public void ChangePapaCapimToPlaying() {
         papaCapimIdle.SetActive(false);
         papaCapimPlaying.SetActive(true);
-        var soundSpeaker = papaCapimPlaying.GetComponent<NPC>().soundSpeaker;
-        if (soundSpeaker != null) {
-            soundSpeaker.Use();
-        }
     }
+
 }

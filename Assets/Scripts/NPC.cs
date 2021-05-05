@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class NPC : MonoBehaviour
 {
-    [SerializeField] List<string> randomSayings;
+    [SerializeField] public List<string> randomSayings;
     [SerializeField] Text textDisplayTemplate;
     [SerializeField] [Range(0f, 10f)] float timeToShowRandomSayingInSecons = 2;
     [SerializeField] [Range(0f, 10f)] float timeGapBetweenSayingsInSecons = 2;
@@ -24,26 +24,25 @@ public class NPC : MonoBehaviour
             randomSayingTimeCounter -= Time.deltaTime;
 
             if (randomSayingTimeCounter <= 0) {
-                Destroy(textDisplay);
-                textDisplay = null;
-                gapSayingTimeCounter = timeGapBetweenSayingsInSecons;
+                DestroyRandomSayingTextDisplay();
             } else {
                 UpdateTextDisplayPosition();
             }
         } else  if (gapSayingTimeCounter > 0) {
             gapSayingTimeCounter -= Time.deltaTime;
-        } else {
+        } else if (Random.Range(0f, 1f) > randomSayingThreshold && timeToShowRandomSayingInSecons > 0) {
             ShowRandomSaying();
         }
     }
 
-    void ShowRandomSaying() {
-        if (randomSayings.Count == 0 || timeToShowRandomSayingInSecons == 0) {
-            return;
-        }
+    public void DestroyRandomSayingTextDisplay() {
+        Destroy(textDisplay);
+        textDisplay = null;
+        gapSayingTimeCounter = timeGapBetweenSayingsInSecons;
+    }
 
-        float randRate = Random.Range(0f, 1f);
-        if (randRate > randomSayingThreshold) {
+    public void ShowRandomSaying() {
+        if (randomSayings.Count == 0) {
             return;
         }
 

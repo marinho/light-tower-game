@@ -1,10 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class SoundSpeaker : MonoBehaviour
 {
     [SerializeField] bool isPlaying;
+    [SerializeField] UnityEvent onPlay;
+    [SerializeField] UnityEvent onStop;
 
     static float highSoundVolume = .5f;
     static float lowSoundVolume = .0f;
@@ -16,6 +19,11 @@ public class SoundSpeaker : MonoBehaviour
     public void Use()
     {
         isPlaying = !isPlaying;
+        if (isPlaying) {
+            onPlay.Invoke();
+        } else {
+            onStop.Invoke();
+        }
     }
 
     void UpdatePlayingState() {
