@@ -12,8 +12,19 @@ public class SoundSpeaker : MonoBehaviour
     static float highSoundVolume = .5f;
     static float lowSoundVolume = .0f;
 
+    Renderer renderer;
+
+    void Awake() {
+        renderer = GetComponent<Renderer>();
+        renderer.enabled = false;
+    }
+
     void Update() {
         UpdatePlayingState();
+    }
+
+    public void SetVisible() {
+        renderer.enabled = true;
     }
 
     public void Use()

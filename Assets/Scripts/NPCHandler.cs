@@ -1,11 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class NPCHandler : MonoBehaviour
 {
+    [SerializeField] Image songScoreDisplay;
+
     public void IncreaseSongPoints() {
-        // TODO
+        var songScore = songScoreDisplay.GetComponent<SongScoreDisplay>();
+        songScore.IncreaseSongPoints();
     }
 
     // Bassist
