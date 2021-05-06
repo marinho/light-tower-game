@@ -8,15 +8,16 @@ public class SoundSpeaker : MonoBehaviour
     [SerializeField] bool isPlaying;
     [SerializeField] UnityEvent onPlay;
     [SerializeField] UnityEvent onStop;
+    [SerializeField] SongScoreDisplay songScoreDisplay;
 
     static float highSoundVolume = .5f;
     static float lowSoundVolume = .0f;
 
-    Renderer renderer;
+    Renderer objectRenderer;
 
     void Awake() {
-        renderer = GetComponent<Renderer>();
-        renderer.enabled = false;
+        objectRenderer = GetComponent<Renderer>();
+        objectRenderer.enabled = false;
     }
 
     void Update() {
@@ -24,16 +25,17 @@ public class SoundSpeaker : MonoBehaviour
     }
 
     public void SetVisible() {
-        renderer.enabled = true;
+        objectRenderer.enabled = true;
     }
 
     public void Use()
     {
-        isPlaying = !isPlaying;
         if (isPlaying) {
-            onPlay.Invoke();
-        } else {
+            isPlaying = false;
             onStop.Invoke();
+        } else if (songScoreDisplay.CanPlayOneMoreSong()) {
+            isPlaying = true;
+            onPlay.Invoke();
         }
     }
 
