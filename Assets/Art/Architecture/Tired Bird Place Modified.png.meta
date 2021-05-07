@@ -1,0 +1,1740 @@
+fileFormatVersion: 2
+guid: ca4269361e65a40189d07ea3feb9cbec
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 2848348095939927349
+    second: Tired Bird Place_0
+  - first:
+      213: 5236448117727301557
+    second: Tired Bird Place_1
+  - first:
+      213: -4869952604851069656
+    second: Tired Bird Place_2
+  - first:
+      213: -2437275183955432749
+    second: Tired Bird Place_3
+  - first:
+      213: 2295986232890058015
+    second: Tired Bird Place_4
+  - first:
+      213: -2792197420624394969
+    second: Tired Bird Place_5
+  - first:
+      213: 3074855927460785493
+    second: Tired Bird Place_6
+  - first:
+      213: 4033081314218247851
+    second: Tired Bird Place_7
+  - first:
+      213: -279318290531447983
+    second: Tired Bird Place_8
+  - first:
+      213: 4553704443057055349
+    second: Tired Bird Place_9
+  - first:
+      213: 7850167104188491766
+    second: Tired Bird Place_10
+  - first:
+      213: -8215622599613254002
+    second: Tired Bird Place_11
+  - first:
+      213: -2485050743406517682
+    second: Tired Bird Place_12
+  - first:
+      213: 5332107653860020866
+    second: Tired Bird Place_13
+  - first:
+      213: 8034903799152741963
+    second: Tired Bird Place_14
+  - first:
+      213: 8873542632556250278
+    second: Tired Bird Place_15
+  - first:
+      213: -4347367331129407336
+    second: Tired Bird Place_16
+  - first:
+      213: 7820200110682921414
+    second: Tired Bird Place_17
+  - first:
+      213: 5742435570749776509
+    second: Tired Bird Place_18
+  - first:
+      213: -5374139803744671962
+    second: Tired Bird Place_19
+  - first:
+      213: 6602901331814775306
+    second: Tired Bird Place_20
+  - first:
+      213: -3521936178183659497
+    second: Tired Bird Place_21
+  - first:
+      213: -8835928927601782121
+    second: Tired Bird Place_22
+  - first:
+      213: 1844630803513022639
+    second: Tired Bird Place_23
+  - first:
+      213: -1294721282644067890
+    second: Tired Bird Place_24
+  - first:
+      213: 8742151778969592313
+    second: Tired Bird Place_25
+  - first:
+      213: -7795110367256259520
+    second: Tired Bird Place_26
+  - first:
+      213: 8227205827755416084
+    second: Tired Bird Place_27
+  - first:
+      213: 2988039227127569726
+    second: Tired Bird Place_28
+  - first:
+      213: 6942702943608056881
+    second: Tired Bird Place_29
+  - first:
+      213: 5530054601752826056
+    second: Tired Bird Place_30
+  - first:
+      213: -3647097182506034616
+    second: Tired Bird Place_31
+  - first:
+      213: -5430194606970582555
+    second: Tired Bird Place_32
+  - first:
+      213: 6789401495348403888
+    second: Tired Bird Place_33
+  - first:
+      213: 4868949857727280547
+    second: Tired Bird Place_34
+  - first:
+      213: -5190037743493410747
+    second: Tired Bird Place_35
+  - first:
+      213: -3124161900969542423
+    second: Tired Bird Place_36
+  - first:
+      213: -7339039036088817546
+    second: Tired Bird Place_37
+  - first:
+      213: -6216006307282383644
+    second: Tired Bird Place_38
+  - first:
+      213: 856665481574792066
+    second: Tired Bird Place_39
+  - first:
+      213: -838090428969094240
+    second: Tired Bird Place_40
+  - first:
+      213: 6741635014739340826
+    second: Tired Bird Place_41
+  - first:
+      213: -4392721878128184502
+    second: Tired Bird Place_42
+  - first:
+      213: -1325694622884009143
+    second: Tired Bird Place_43
+  - first:
+      213: -1022209795018489798
+    second: Tired Bird Place_44
+  - first:
+      213: 8914725506991553986
+    second: Tired Bird Place_45
+  - first:
+      213: -3691300484840865524
+    second: Tired Bird Place_46
+  - first:
+      213: -5919656625300957562
+    second: Tired Bird Place_47
+  - first:
+      213: -7068643132052317313
+    second: Tired Bird Place_48
+  - first:
+      213: -8812965764304163115
+    second: Tired Bird Place_49
+  - first:
+      213: -4740276319799449021
+    second: Tired Bird Place_50
+  - first:
+      213: 3603506247342285716
+    second: Tired Bird Place_51
+  - first:
+      213: -7004215147623342923
+    second: Tired Bird Place_52
+  - first:
+      213: 2429920444965884636
+    second: Tired Bird Place_53
+  - first:
+      213: 3397056767667106423
+    second: Tired Bird Place_54
+  - first:
+      213: -3399328782497432856
+    second: Tired Bird Place_55
+  - first:
+      213: -1812909814801401850
+    second: Tired Bird Place_56
+  - first:
+      213: -4621897223120750422
+    second: Tired Bird Place_57
+  - first:
+      213: -1664906160063398052
+    second: Tired Bird Place_58
+  - first:
+      213: 7258408264280996389
+    second: Tired Bird Place_59
+  - first:
+      213: 2609688637444810000
+    second: Tired Bird Place Modified_0
+  - first:
+      213: -472731913112993229
+    second: Tired Bird Place Modified_1
+  - first:
+      213: -8903049981244082746
+    second: Tired Bird Place Modified_2
+  - first:
+      213: -1260961025310958399
+    second: Tired Bird Place Modified_3
+  - first:
+      213: 3235566195425617257
+    second: Tired Bird Place Modified_4
+  - first:
+      213: -6706186400094392584
+    second: Tired Bird Place Modified_5
+  - first:
+      213: 3688439863999254939
+    second: Tired Bird Place Modified_6
+  - first:
+      213: -7503990811496216478
+    second: Tired Bird Place Modified_7
+  - first:
+      213: 5230527524675909315
+    second: Tired Bird Place Modified_8
+  - first:
+      213: 719003481642229760
+    second: Tired Bird Place Modified_9
+  - first:
+      213: 5287164712686495442
+    second: Tired Bird Place Modified_10
+  - first:
+      213: 7909337981561359468
+    second: Tired Bird Place Modified_11
+  - first:
+      213: 3771429941824124593
+    second: Tired Bird Place Modified_12
+  - first:
+      213: -736181530978353037
+    second: Tired Bird Place Modified_13
+  - first:
+      213: 2983348908184835474
+    second: Tired Bird Place Modified_14
+  - first:
+      213: -7592760805550683419
+    second: Tired Bird Place Modified_15
+  - first:
+      213: 6204079052531906321
+    second: Tired Bird Place Modified_16
+  - first:
+      213: -8518693582543331665
+    second: Tired Bird Place Modified_17
+  - first:
+      213: 7977564564699267601
+    second: Tired Bird Place Modified_18
+  - first:
+      213: 57098459747304708
+    second: Tired Bird Place Modified_19
+  - first:
+      213: -3056808056405428636
+    second: Tired Bird Place Modified_20
+  - first:
+      213: -5778044569780088669
+    second: Tired Bird Place Modified_21
+  - first:
+      213: 3544869741927853870
+    second: Tired Bird Place Modified_22
+  - first:
+      213: 6817118109045708975
+    second: Tired Bird Place Modified_23
+  - first:
+      213: 4600907291973774764
+    second: Tired Bird Place Modified_24
+  - first:
+      213: -5328263128616229972
+    second: Tired Bird Place Modified_25
+  - first:
+      213: -3353935803025869733
+    second: Tired Bird Place Modified_26
+  - first:
+      213: -5883662200785044828
+    second: Tired Bird Place Modified_27
+  - first:
+      213: -8286914087336851388
+    second: Tired Bird Place Modified_28
+  - first:
+      213: -7207072891180124132
+    second: Tired Bird Place Modified_29
+  - first:
+      213: -8089211659125166934
+    second: Tired Bird Place Modified_30
+  - first:
+      213: -5252569130501545185
+    second: Tired Bird Place Modified_31
+  - first:
+      213: -163677823058326383
+    second: Tired Bird Place Modified_32
+  - first:
+      213: -8573432675861594565
+    second: Tired Bird Place Modified_33
+  - first:
+      213: 1527786996885674342
+    second: Tired Bird Place Modified_34
+  - first:
+      213: -8218037029254554728
+    second: Tired Bird Place Modified_35
+  - first:
+      213: -2704877486513240817
+    second: Tired Bird Place Modified_36
+  - first:
+      213: 3031283642045298655
+    second: Tired Bird Place Modified_37
+  - first:
+      213: 2511087340794630102
+    second: Tired Bird Place Modified_38
+  - first:
+      213: 2873738052058166654
+    second: Tired Bird Place Modified_39
+  - first:
+      213: -3482654408289062854
+    second: Tired Bird Place Modified_40
+  - first:
+      213: -5876315819170255006
+    second: Tired Bird Place Modified_41
+  - first:
+      213: -74216662642516362
+    second: Tired Bird Place Modified_42
+  - first:
+      213: 5911995936061870320
+    second: Tired Bird Place Modified_43
+  - first:
+      213: -2989854809044058408
+    second: Tired Bird Place Modified_44
+  - first:
+      213: -6880381522312336409
+    second: Tired Bird Place Modified_45
+  - first:
+      213: 3422137342381304375
+    second: Tired Bird Place Modified_46
+  - first:
+      213: 1739214316635286972
+    second: Tired Bird Place Modified_47
+  - first:
+      213: -2208770777917323343
+    second: Tired Bird Place Modified_48
+  - first:
+      213: -695291125690612579
+    second: Tired Bird Place Modified_49
+  - first:
+      213: 2381481307757193833
+    second: Tired Bird Place Modified_50
+  - first:
+      213: -8896606737856358784
+    second: Tired Bird Place Modified_51
+  - first:
+      213: -5847196031331323649
+    second: Tired Bird Place Modified_52
+  - first:
+      213: 4008458863827808946
+    second: Tired Bird Place Modified_53
+  - first:
+      213: 7424415638179668836
+    second: Tired Bird Place Modified_54
+  - first:
+      213: -7869624783564923326
+    second: Tired Bird Place Modified_55
+  - first:
+      213: 2805178512531716269
+    second: Tired Bird Place Modified_56
+  - first:
+      213: -4461991741583823214
+    second: Tired Bird Place Modified_57
+  - first:
+      213: -529438445957275036
+    second: Tired Bird Place Modified_58
+  - first:
+      213: 5123024352851778737
+    second: Tired Bird Place Modified_59
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Tired Bird Place Modified_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01565413df9773420800000000000000
+      internalID: 2609688637444810000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tired Bird Place Modified_1
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 332c8e464d48079f0800000000000000
+      internalID: -472731913112993229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tired Bird Place Modified_2
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c5f5626633027480800000000000000
+      internalID: -8903049981244082746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tired Bird Place Modified_3
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1cc5abad0aa208ee0800000000000000
+      internalID: -1260961025310958399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tired Bird Place Modified_4
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9652b9ddf4a07ec20800000000000000
+      internalID: 3235566195425617257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tired Bird Place Modified_5
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8fe61d00007dee2a0800000000000000
+      internalID: -6706186400094392584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tired Bird Place Modified_6
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b91d01d9388ff2330800000000000000
+      internalID: 3688439863999254939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tired Bird Place Modified_7
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26809f26d187cd790800000000000000
+      internalID: -7503990811496216478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tired Bird Place Modified_8
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c6f5383211969840800000000000000
+      internalID: 5230527524675909315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tired Bird Place Modified_9
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 000ed8b6bd96af900800000000000000
+      internalID: 719003481642229760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tired Bird Place Modified_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d6a8a82b48cf5940800000000000000
+      internalID: 5287164712686495442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tired Bird Place Modified_11
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6c487f1dfc93cd60800000000000000
+      internalID: 7909337981561359468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tired Bird Place Modified_12
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b6f2b9dc8fc65430800000000000000
+      internalID: 3771429941824124593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tired Bird Place Modified_13
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37005db4cce88c5f0800000000000000
+      internalID: -736181530978353037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tired Bird Place Modified_14
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2951869860cf66920800000000000000
+      internalID: 2983348908184835474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tired Bird Place Modified_15
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ea84a8864811a690800000000000000
+      internalID: -7592760805550683419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tired Bird Place Modified_16
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1173b941701591650800000000000000
+      internalID: 6204079052531906321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tired Bird Place Modified_17
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: faeda16125587c980800000000000000
+      internalID: -8518693582543331665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tired Bird Place Modified_18
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 112c4a364b006be60800000000000000
+      internalID: 7977564564699267601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tired Bird Place Modified_19
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 405c5722fbadac000800000000000000
+      internalID: 57098459747304708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tired Bird Place Modified_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 466f663b4490495d0800000000000000
+      internalID: -3056808056405428636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tired Bird Place Modified_21
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a012e1c31340dfa0800000000000000
+      internalID: -5778044569780088669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tired Bird Place Modified_22
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2fe3aeaf38e13130800000000000000
+      internalID: 3544869741927853870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tired Bird Place Modified_23
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa85d813dc44b9e50800000000000000
+      internalID: 6817118109045708975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tired Bird Place Modified_24
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cade99e2ec4b9df30800000000000000
+      internalID: 4600907291973774764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tired Bird Place Modified_25
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca3a4053ae43e06b0800000000000000
+      internalID: -5328263128616229972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tired Bird Place Modified_26
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b54bd25382d6471d0800000000000000
+      internalID: -3353935803025869733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tired Bird Place Modified_27
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4aa70dfb668095ea0800000000000000
+      internalID: -5883662200785044828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tired Bird Place Modified_28
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4484b142b87fefc80800000000000000
+      internalID: -8286914087336851388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tired Bird Place Modified_29
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c187cd2e3655bfb90800000000000000
+      internalID: -7207072891180124132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tired Bird Place Modified_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aac65e0cad85dbf80800000000000000
+      internalID: -8089211659125166934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tired Bird Place Modified_31
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f13e54284302b17b0800000000000000
+      internalID: -5252569130501545185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tired Bird Place Modified_32
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19ccffa13ef7abdf0800000000000000
+      internalID: -163677823058326383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tired Bird Place Modified_33
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3efa81c76c050980800000000000000
+      internalID: -8573432675861594565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tired Bird Place Modified_34
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 669d4d9dd2ac33510800000000000000
+      internalID: 1527786996885674342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tired Bird Place Modified_35
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89b9648ecdaa3fd80800000000000000
+      internalID: -8218037029254554728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tired Bird Place Modified_36
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f054d6fc148567ad0800000000000000
+      internalID: -2704877486513240817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tired Bird Place Modified_37
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd7ff897968411a20800000000000000
+      internalID: 3031283642045298655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tired Bird Place Modified_38
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6df4b04d1ac29d220800000000000000
+      internalID: 2511087340794630102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tired Bird Place Modified_39
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e75337a588191e720800000000000000
+      internalID: 2873738052058166654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tired Bird Place Modified_40
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a307b7e74402bafc0800000000000000
+      internalID: -3482654408289062854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tired Bird Place Modified_41
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26f295285e1237ea0800000000000000
+      internalID: -5876315819170255006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tired Bird Place Modified_42
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67e17caa65458fef0800000000000000
+      internalID: -74216662642516362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tired Bird Place Modified_43
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f055821bf0ab0250800000000000000
+      internalID: 5911995936061870320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tired Bird Place Modified_44
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8de7fe064e6e186d0800000000000000
+      internalID: -2989854809044058408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tired Bird Place Modified_45
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7eb69639579f380a0800000000000000
+      internalID: -6880381522312336409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tired Bird Place Modified_46
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73aac3918cfdd7f20800000000000000
+      internalID: 3422137342381304375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tired Bird Place Modified_47
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cbde15bc43ee22810800000000000000
+      internalID: 1739214316635286972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tired Bird Place Modified_48
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b789f71eaed851e0800000000000000
+      internalID: -2208770777917323343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tired Bird Place Modified_49
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d94cabda764d956f0800000000000000
+      internalID: -695291125690612579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tired Bird Place Modified_50
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96aa91cb1a8bc0120800000000000000
+      internalID: 2381481307757193833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tired Bird Place Modified_51
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08699b3ee47e88480800000000000000
+      internalID: -8896606737856358784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tired Bird Place Modified_52
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff03c6470369adea0800000000000000
+      internalID: -5847196031331323649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tired Bird Place Modified_53
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b2f8335918e0a730800000000000000
+      internalID: 4008458863827808946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tired Bird Place Modified_54
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 463ed8acfa2d80760800000000000000
+      internalID: 7424415638179668836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tired Bird Place Modified_55
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24e900454f979c290800000000000000
+      internalID: -7869624783564923326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tired Bird Place Modified_56
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da8f203aefefde620800000000000000
+      internalID: 2805178512531716269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tired Bird Place Modified_57
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29e6b24d622d312c0800000000000000
+      internalID: -4461991741583823214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tired Bird Place Modified_58
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 462284ad98e07a8f0800000000000000
+      internalID: -529438445957275036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tired Bird Place Modified_59
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1bcd7678183a81740800000000000000
+      internalID: 5123024352851778737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
