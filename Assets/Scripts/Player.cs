@@ -27,6 +27,7 @@ public class Player : MonoBehaviour
     private bool isJumping;
     private float jumpTimeCounter;
     bool movementIsEnabled = true;
+    private Collider2D currentGround;
 
     void Start()
     {
@@ -44,7 +45,20 @@ public class Player : MonoBehaviour
             return;
         }
 
-        isGrounded = Physics2D.OverlapCircle(feetPosition.position, checkRadius, whatIsGround);
+        var newGround = Physics2D.OverlapCircle(feetPosition.position, checkRadius, whatIsGround);
+        isGrounded = newGround;
+
+        if (isGrounded) {
+            if (currentGround && newGround != currentGround && currentGround.CompareTag("CanGoDown")) {
+                currentGround.enabled = true;
+            }
+
+            currentGround = newGround;
+
+            if (currentGround.CompareTag("CanGoDown") && Input.GetAxisRaw("Vertical") < 0) {
+                currentGround.enabled = false;
+            }
+        }
 
         if (isGrounded && Input.GetButtonDown("Jump")) {
             isJumping = true;

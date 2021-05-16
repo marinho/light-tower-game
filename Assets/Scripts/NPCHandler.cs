@@ -73,4 +73,10 @@ public class NPCHandler : MonoBehaviour
         papaCapimPlaying.SetActive(true);
     }
 
+    // Grandma
+
+    public void VerifyIfGrandmasItemsAreTaken(ItemContainer itemContainer) {
+        Debug.Log("1111: "); // XXX
+    }
+
 }

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public enum ControlPadInputButton {
     Use,   // Circle
@@ -15,6 +16,7 @@ public class UseObject : MonoBehaviour
     [SerializeField] bool isActive = true;
     [SerializeField] UIControlPad uiControlPad;
     [SerializeField] ControlPadInputButton inputButton;
+    [SerializeField] UnityEvent onUse;
 
     private bool playerInRange = false;
     private Material initialMaterial;
@@ -32,18 +34,24 @@ public class UseObject : MonoBehaviour
     {
         if (Input.GetButtonUp(inputButtonKey) && playerInRange)
         {
-            if (screenToShow != null) {
-                if (!screenToShow.activeInHierarchy) {
-                    if (screenToShow.GetComponent<Dialogue>() != null) {
-                        screenToShow.GetComponent<Dialogue>().StartDialogue();
-                    } else {
-                        ShowAttachedScreen();
-                    }
-                }
-            } else if (gameObject.GetComponent<SoundSpeaker>() != null) {
-                gameObject.GetComponent<SoundSpeaker>().Use();
-            }
+            Use();
         }
+    }
+
+    private void Use() {
+        if (screenToShow != null) {
+            if (!screenToShow.activeInHierarchy) {
+                if (screenToShow.GetComponent<Dialogue>() != null) {
+                    screenToShow.GetComponent<Dialogue>().StartDialogue();
+                } else {
+                    ShowAttachedScreen();
+                }
+            }
+        } else if (gameObject.GetComponent<SoundSpeaker>() != null) {
+            gameObject.GetComponent<SoundSpeaker>().Use();
+        }
+
+        onUse.Invoke();
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -82,6 +90,10 @@ public class UseObject : MonoBehaviour
 
     public void SetScreenToShow(GameObject screenObject) {
         screenToShow = screenObject;
+    }
+
+    public void SetActive(bool newActive) {
+        isActive = newActive;
     }
 
 }
