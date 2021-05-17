@@ -6,6 +6,7 @@ using UnityEngine.Events;
 public class SoundSpeaker : MonoBehaviour
 {
     [SerializeField] bool isPlaying;
+    [SerializeField] bool isVisible;
     [SerializeField] UnityEvent onPlay;
     [SerializeField] UnityEvent onStop;
     [SerializeField] SongScoreDisplay songScoreDisplay;
@@ -17,7 +18,7 @@ public class SoundSpeaker : MonoBehaviour
 
     void Awake() {
         objectRenderer = GetComponent<Renderer>();
-        objectRenderer.enabled = false;
+        objectRenderer.enabled = isVisible;
     }
 
     void Update() {
@@ -25,7 +26,7 @@ public class SoundSpeaker : MonoBehaviour
     }
 
     public void SetVisible() {
-        objectRenderer.enabled = true;
+        objectRenderer.enabled = isVisible = true;
     }
 
     public void Use()

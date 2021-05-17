@@ -47,9 +47,12 @@ public class NPCHandler : MonoBehaviour
         papaCapimIdle.GetComponent<UseObject>().SetScreenToShow(null);
     }
 
+    public void UnsetDialogueForPapaCapimPlaying() {
+        papaCapimPlaying.GetComponent<UseObject>().SetScreenToShow(null);
+    }
+
     public void EnableSeedeaterBirdAndPianoSoundSpeaker() {
         seedeaterBird.SetActive(true);
-        // TODO: set piano soundSpeaker visible
     }
 
     public void BirdWasCaught() {
@@ -75,8 +78,42 @@ public class NPCHandler : MonoBehaviour
 
     // Grandma
 
+    [SerializeField] GameObject grandmaIdle;
+    [SerializeField] GameObject grandmaWalking;
+    [SerializeField] GameObject secondDialogueForGrandma;
+    [SerializeField] Transform grandmaWalkingDestination;
+
+    public void UnsetDialogueForGrandmaIdle() {
+        grandmaIdle.GetComponent<UseObject>().SetScreenToShow(null);
+    }
+
+    public void UnsetDialogueForGrandmaWalking() {
+        grandmaWalking.GetComponent<UseObject>().SetScreenToShow(null);
+    }
+
     public void VerifyIfGrandmasItemsAreTaken(ItemContainer itemContainer) {
-        Debug.Log("1111: "); // XXX
+        var itemsCount = itemContainer.CountItemsOfTag("Grandma Item");
+        if (itemsCount < 2) {
+            return;
+        }
+
+        grandmaIdle.GetComponent<UseObject>().SetScreenToShow(secondDialogueForGrandma);
+    }
+
+    public void ChangeGrandmaToWalking() {
+        grandmaIdle.SetActive(false);
+        grandmaWalking.SetActive(true);
+
+        var walkToPosition = new Vector3(
+            grandmaWalkingDestination.position.x,
+            grandmaWalking.transform.position.y,
+            grandmaWalking.transform.position.z
+        );
+        grandmaWalking.GetComponent<Walker>().WalkTo(walkToPosition);
+    }
+
+    public void UpdateAfterGrandmaArrivesDestination() {
+        // TODO: set third Grandma dialogue for grandmaWalking
     }
 
 }

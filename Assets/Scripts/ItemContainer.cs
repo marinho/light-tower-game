@@ -20,4 +20,15 @@ public class ItemContainer : MonoBehaviour
     public bool HasItem(GameObject item) {
         return items.Contains(item);
     }
+
+    public int CountItemsOfTag(string tag) {
+        int result = 0;
+        foreach (var item in items)
+        {
+            if (item.CompareTag(tag)) {
+                result++;
+            }
+        }
+        return result;
+    }
 }
