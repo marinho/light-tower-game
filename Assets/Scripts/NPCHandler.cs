@@ -64,7 +64,7 @@ public class NPCHandler : MonoBehaviour
 
         npc.randomSayings = newSayings;
         npc.DestroyRandomSayingTextDisplay();
-        npc.ShowRandomSaying();
+        npc.ShowRandomSayingText();
     }
 
     public void SetSecondDialogueForPapaCapimIdle() {
@@ -124,7 +124,7 @@ public class NPCHandler : MonoBehaviour
 
         npc.randomSayings = newSayings;
         npc.DestroyRandomSayingTextDisplay();
-        npc.ShowRandomSaying();
+        npc.ShowRandomSayingText();
 
         grandmaWalking.GetComponent<UseObject>().SetScreenToShow(thirdDialogueForGrandma);
     }

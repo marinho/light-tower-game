@@ -60,12 +60,14 @@ public class Dialogue : MonoBehaviour
     public void StartDialogue() {
         gameObject.SetActive(true);
         NextSentence();
+        Player.Instance.DisablePlayerMovements();
         onStart.Invoke();
     }
 
     public void EndDialogue() {
         HideCurrentSentence();
         gameObject.SetActive(false);
+        Player.Instance.EnablePlayerMovements();
         onEnd.Invoke();
     }
 }

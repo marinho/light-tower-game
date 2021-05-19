@@ -8,7 +8,7 @@ using UnityEngine;
 //    running
 //}
 
-public class Player : MonoBehaviour
+public class Player : Singleton<Player>
 {
     [SerializeField] float speed;
     [SerializeField] Transform feetPosition;
@@ -28,6 +28,9 @@ public class Player : MonoBehaviour
     private float jumpTimeCounter;
     bool movementIsEnabled = true;
     private Collider2D currentGround;
+
+    // Prevent non-singleton constructor use.
+    protected Player() { }
 
     void Start()
     {

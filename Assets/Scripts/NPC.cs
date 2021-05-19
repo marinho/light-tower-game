@@ -14,12 +14,20 @@ public class NPC : MonoBehaviour
     [SerializeField] Camera usedCamera;
     [SerializeField] public SoundSpeaker soundSpeaker;
 
-
     float randomSayingTimeCounter;
     float gapSayingTimeCounter;
     Text textDisplay;
+    bool randomSayingsEnabled = true;
 
     void Update() {
+        UpdateRandomSayings();
+    }
+
+    void UpdateRandomSayings() {
+        if (!randomSayingsEnabled){
+            return;
+        }
+
         if (textDisplay != null) {
             randomSayingTimeCounter -= Time.deltaTime;
 
@@ -31,7 +39,7 @@ public class NPC : MonoBehaviour
         } else  if (gapSayingTimeCounter > 0) {
             gapSayingTimeCounter -= Time.deltaTime;
         } else if (Random.Range(0f, 1f) > randomSayingThreshold && timeToShowRandomSayingInSecons > 0) {
-            ShowRandomSaying();
+            ShowRandomSayingText();
         }
     }
 
@@ -41,7 +49,18 @@ public class NPC : MonoBehaviour
         gapSayingTimeCounter = timeGapBetweenSayingsInSecons;
     }
 
-    public void ShowRandomSaying() {
+    public void EnableRandomSayings() {
+        randomSayingsEnabled = true;
+    }
+
+    public void DisableRandomSayings() {
+        randomSayingsEnabled = false;
+        if (textDisplay != null) {
+            DestroyRandomSayingTextDisplay();
+        }
+    }
+
+    public void ShowRandomSayingText() {
         if (randomSayings.Count == 0) {
             return;
         }
