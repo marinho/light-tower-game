@@ -11,6 +11,11 @@ public class Walker : MonoBehaviour
     private Vector3 destinationPosition;
     private bool isWalking;
     private bool isPaused;
+    private Animator animator;
+
+    void Awake() {
+        animator = GetComponent<Animator>();
+    }
 
     // Update is called once per frame
     void Update()
@@ -33,6 +38,7 @@ public class Walker : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             isPaused = false;
+            UpdateAnimatorState();
         }
     }
 
@@ -41,18 +47,24 @@ public class Walker : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             isPaused = true;
+            UpdateAnimatorState();
         }
+    }
+
+    private void UpdateAnimatorState() {
+        animator.SetBool("isMoving", isWalking && !isPaused);
     }
 
     private void StopWalking() {
         isWalking = false;
         onArriveDestination.Invoke();
-        // TODO: stop animation
+        UpdateAnimatorState();
     }
 
     public void WalkTo(Vector3 destination) {
         transform.rotation = Quaternion.Euler(0, destination.x >= transform.position.x ? 180 : 0, 0);
         destinationPosition = destination;
         isWalking = true;
+        UpdateAnimatorState();
     }
 }

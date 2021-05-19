@@ -81,6 +81,7 @@ public class NPCHandler : MonoBehaviour
     [SerializeField] GameObject grandmaIdle;
     [SerializeField] GameObject grandmaWalking;
     [SerializeField] GameObject secondDialogueForGrandma;
+    [SerializeField] GameObject thirdDialogueForGrandma;
     [SerializeField] Transform grandmaWalkingDestination;
 
     public void UnsetDialogueForGrandmaIdle() {
@@ -104,6 +105,8 @@ public class NPCHandler : MonoBehaviour
         grandmaIdle.SetActive(false);
         grandmaWalking.SetActive(true);
 
+        var animator = grandmaWalking.GetComponent<Animator>();
+
         var walkToPosition = new Vector3(
             grandmaWalkingDestination.position.x,
             grandmaWalking.transform.position.y,
@@ -113,7 +116,17 @@ public class NPCHandler : MonoBehaviour
     }
 
     public void UpdateAfterGrandmaArrivesDestination() {
-        // TODO: set third Grandma dialogue for grandmaWalking
+        var npc = grandmaWalking.GetComponent<NPC>();
+
+        var newSayings = new List<string>();
+        newSayings.Add("Oh... finally arrived. I will reward her for this help.");
+        newSayings.Add("Little, talk to me, before you leave?");
+
+        npc.randomSayings = newSayings;
+        npc.DestroyRandomSayingTextDisplay();
+        npc.ShowRandomSaying();
+
+        grandmaWalking.GetComponent<UseObject>().SetScreenToShow(thirdDialogueForGrandma);
     }
 
 }
