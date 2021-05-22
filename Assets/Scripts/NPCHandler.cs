@@ -18,10 +18,6 @@ public class NPCHandler : MonoBehaviour
     [SerializeField] GameObject bassistPlaying;
     [SerializeField] GameObject secondDialogueForBassistIdle;
 
-    public void UnsetDialogueForBassistIdle() {
-        bassistIdle.GetComponent<UseObject>().SetScreenToShow(null);
-    }
-
     public void SetSecondDialogueForBassistIdle() {
         bassistIdle.GetComponent<UseObject>().SetScreenToShow(secondDialogueForBassistIdle);
     }
@@ -42,14 +38,6 @@ public class NPCHandler : MonoBehaviour
     [SerializeField] GameObject papaCapimPlaying;
     [SerializeField] GameObject seedeaterBird;
     [SerializeField] GameObject secondDialogueForPapaCapimIdle;
-
-    public void UnsetDialogueForPapaCapimIdle() {
-        papaCapimIdle.GetComponent<UseObject>().SetScreenToShow(null);
-    }
-
-    public void UnsetDialogueForPapaCapimPlaying() {
-        papaCapimPlaying.GetComponent<UseObject>().SetScreenToShow(null);
-    }
 
     public void EnableSeedeaterBirdAndPianoSoundSpeaker() {
         seedeaterBird.SetActive(true);
@@ -84,15 +72,8 @@ public class NPCHandler : MonoBehaviour
     [SerializeField] GameObject thirdDialogueForGrandma;
     [SerializeField] Transform grandmaWalkingDestination;
 
-    public void UnsetDialogueForGrandmaIdle() {
-        grandmaIdle.GetComponent<UseObject>().SetScreenToShow(null);
-    }
-
-    public void UnsetDialogueForGrandmaWalking() {
-        grandmaWalking.GetComponent<UseObject>().SetScreenToShow(null);
-    }
-
-    public void VerifyIfGrandmasItemsAreTaken(ItemContainer itemContainer) {
+    public void VerifyIfGrandmasItemsAreTaken() {
+        var itemContainer = ItemContainer.Instance;
         var itemsCount = itemContainer.CountItemsOfTag("Grandma Item");
         if (itemsCount < 2) {
             return;
@@ -135,13 +116,19 @@ public class NPCHandler : MonoBehaviour
     [SerializeField] GameObject priestHappy;
     [SerializeField] GameObject secondDialogueForPriest;
     
-    public void VerifyIfPriestsItemsAreTaken(ItemContainer itemContainer) {
+    public void VerifyIfPriestsItemsAreTaken() {
+        var itemContainer = ItemContainer.Instance;
         var itemsCount = itemContainer.CountItemsOfTag("Priest Item");
         if (itemsCount < 1) {
             return;
         }
 
         priestSad.GetComponent<UseObject>().SetScreenToShow(secondDialogueForPriest);
+    }
+
+    public void ChangePriestToHappy() {
+        priestSad.SetActive(false);
+        priestHappy.SetActive(true);
     }
 
 }

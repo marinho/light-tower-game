@@ -52,7 +52,7 @@ public class Dialogue : MonoBehaviour
     }
 
     void HideCurrentSentence() {
-        if (currentSentence >= 0) {
+        if (currentSentence >= 0 && sentences.Count > 0) {
             sentences[currentSentence].uiObject.SetActive(false);
         }
     }

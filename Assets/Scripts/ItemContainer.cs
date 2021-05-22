@@ -3,10 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class ItemContainer : MonoBehaviour
+public class ItemContainer : Singleton<ItemContainer>
 {
     [SerializeField] List<GameObject> items;
     [SerializeField] UnityEvent onAddItem;
+
+    // Prevent non-singleton constructor use.
+    protected ItemContainer() { }
 
     public void AddItem(GameObject item) {
         items.Add(item);
