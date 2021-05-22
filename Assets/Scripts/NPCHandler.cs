@@ -129,4 +129,19 @@ public class NPCHandler : MonoBehaviour
         grandmaWalking.GetComponent<UseObject>().SetScreenToShow(thirdDialogueForGrandma);
     }
 
+    // Priest
+
+    [SerializeField] GameObject priestSad;
+    [SerializeField] GameObject priestHappy;
+    [SerializeField] GameObject secondDialogueForPriest;
+    
+    public void VerifyIfPriestsItemsAreTaken(ItemContainer itemContainer) {
+        var itemsCount = itemContainer.CountItemsOfTag("Priest Item");
+        if (itemsCount < 1) {
+            return;
+        }
+
+        priestSad.GetComponent<UseObject>().SetScreenToShow(secondDialogueForPriest);
+    }
+
 }

@@ -92,6 +92,10 @@ public class UseObject : MonoBehaviour
         screenToShow = screenObject;
     }
 
+    public void UnsetScreenToShow() {
+        screenToShow = null;
+    }
+
     public void SetActive(bool newActive) {
         isActive = newActive;
     }
