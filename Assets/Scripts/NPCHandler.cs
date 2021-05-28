@@ -131,4 +131,41 @@ public class NPCHandler : MonoBehaviour
         priestHappy.SetActive(true);
     }
 
+    // Twins
+
+    [SerializeField] GameObject twinEmployedSad;
+    [SerializeField] GameObject twinEmployedHappy;
+    [SerializeField] GameObject secondDialogueForTwinEmployed;
+    [SerializeField] GameObject twinJoblessSad;
+    [SerializeField] GameObject twinJoblessHappy;
+    [SerializeField] GameObject secondDialogueForTwinJobless;
+
+    public void TwinEmployedFirstToBeContacted() {
+        twinJoblessSad.GetComponent<UseObject>().SetScreenToShow(secondDialogueForTwinJobless);
+    }
+
+    public void TwinJoblessFirstToBeContacted() {
+        twinEmployedSad.GetComponent<UseObject>().SetScreenToShow(secondDialogueForTwinEmployed);
+    }
+
+    public void ChangeTwinJoblessToWalking() {
+        // grandmaIdle.SetActive(false);
+        // grandmaWalking.SetActive(true);
+        var twinWalking = twinJoblessSad;
+        var destination = twinEmployedSad.transform;
+
+        var animator = twinWalking.GetComponent<Animator>();
+
+        var walkToPosition = new Vector3(
+            destination.position.x,
+            twinWalking.transform.position.y,
+            twinWalking.transform.position.z
+        );
+        twinWalking.GetComponent<Walker>().WalkTo(walkToPosition);
+    }
+
+    public void UpdateAfterTwinArrivesDestination() {
+        IncreaseSongPoints();
+    }
+
 }
