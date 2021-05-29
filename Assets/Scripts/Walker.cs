@@ -7,6 +7,7 @@ public class Walker : MonoBehaviour
 {
     [SerializeField] UnityEvent onArriveDestination;
     [SerializeField] float speed;
+    [SerializeField] bool pauseWhenFarFromPlayer;
 
     private Vector3 destinationPosition;
     private bool isWalking;
@@ -35,7 +36,7 @@ public class Walker : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Player"))
+        if (pauseWhenFarFromPlayer && other.CompareTag("Player"))
         {
             isPaused = false;
             UpdateAnimatorState();
@@ -44,7 +45,7 @@ public class Walker : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D other)
     {
-        if (other.CompareTag("Player"))
+        if (pauseWhenFarFromPlayer && other.CompareTag("Player"))
         {
             isPaused = true;
             UpdateAnimatorState();

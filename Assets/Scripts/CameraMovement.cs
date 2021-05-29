@@ -4,16 +4,18 @@ using UnityEngine;
 
 public class CameraMovement : MonoBehaviour
 {
-    public Transform target;
-    public float smoothing = .1f;
-    public Vector2 maxPosition;
-    public Vector2 minPosition;
+    [SerializeField] bool isFollowingTarget;
+
+    [SerializeField] Transform target;
+    [SerializeField] float smoothing = .1f;
+    [SerializeField] Vector2 maxPosition;
+    [SerializeField] Vector2 minPosition;
 
     // [HideInInspector]
 
     void LateUpdate()
     {
-        if (transform.position != target.position)
+        if (isFollowingTarget && transform.position != target.position)
         {
             Vector3 targetPosition = new Vector3(
                 target.position.x,
@@ -29,5 +31,13 @@ public class CameraMovement : MonoBehaviour
                 smoothing
             );
         }
+    }
+    
+    public void EnableFollowingTarget() {
+        isFollowingTarget = true;
+    }
+
+    public void DisableFollowingTarget() {
+        isFollowingTarget = false;
     }
 }

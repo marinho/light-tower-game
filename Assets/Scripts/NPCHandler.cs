@@ -5,21 +5,19 @@ using UnityEngine.UI;
 
 public class NPCHandler : MonoBehaviour
 {
-    [SerializeField] Image songScoreDisplay;
 
     public void IncreaseSongPoints() {
-        var songScore = songScoreDisplay.GetComponent<SongScoreDisplay>();
-        songScore.IncreaseSongPoints();
+        SongScoreDisplay.Instance.IncreaseSongPoints();
     }
 
     // Bassist
 
     [SerializeField] GameObject bassistIdle;
     [SerializeField] GameObject bassistPlaying;
-    [SerializeField] GameObject secondDialogueForBassistIdle;
+    [SerializeField] Dialogue secondDialogueForBassistIdle;
 
     public void SetSecondDialogueForBassistIdle() {
-        bassistIdle.GetComponent<UseObject>().SetScreenToShow(secondDialogueForBassistIdle);
+        bassistIdle.GetComponent<UseObject>().SetScreenToShow(secondDialogueForBassistIdle.gameObject);
     }
 
     public void ChangeBassistToPlaying() {
@@ -37,7 +35,7 @@ public class NPCHandler : MonoBehaviour
     [SerializeField] GameObject papaCapimIdle;
     [SerializeField] GameObject papaCapimPlaying;
     [SerializeField] GameObject seedeaterBird;
-    [SerializeField] GameObject secondDialogueForPapaCapimIdle;
+    [SerializeField] Dialogue secondDialogueForPapaCapimIdle;
 
     public void EnableSeedeaterBirdAndPianoSoundSpeaker() {
         seedeaterBird.SetActive(true);
@@ -56,7 +54,7 @@ public class NPCHandler : MonoBehaviour
     }
 
     public void SetSecondDialogueForPapaCapimIdle() {
-        papaCapimIdle.GetComponent<UseObject>().SetScreenToShow(secondDialogueForPapaCapimIdle);
+        papaCapimIdle.GetComponent<UseObject>().SetScreenToShow(secondDialogueForPapaCapimIdle.gameObject);
     }
 
     public void ChangePapaCapimToPlaying() {
@@ -68,8 +66,8 @@ public class NPCHandler : MonoBehaviour
 
     [SerializeField] GameObject grandmaIdle;
     [SerializeField] GameObject grandmaWalking;
-    [SerializeField] GameObject secondDialogueForGrandma;
-    [SerializeField] GameObject thirdDialogueForGrandma;
+    [SerializeField] Dialogue secondDialogueForGrandma;
+    [SerializeField] Dialogue thirdDialogueForGrandma;
     [SerializeField] Transform grandmaWalkingDestination;
 
     public void VerifyIfGrandmasItemsAreTaken() {
@@ -79,7 +77,7 @@ public class NPCHandler : MonoBehaviour
             return;
         }
 
-        grandmaIdle.GetComponent<UseObject>().SetScreenToShow(secondDialogueForGrandma);
+        grandmaIdle.GetComponent<UseObject>().SetScreenToShow(secondDialogueForGrandma.gameObject);
     }
 
     public void ChangeGrandmaToWalking() {
@@ -107,14 +105,14 @@ public class NPCHandler : MonoBehaviour
         npc.DestroyRandomSayingTextDisplay();
         npc.ShowRandomSayingText();
 
-        grandmaWalking.GetComponent<UseObject>().SetScreenToShow(thirdDialogueForGrandma);
+        grandmaWalking.GetComponent<UseObject>().SetScreenToShow(thirdDialogueForGrandma.gameObject);
     }
 
     // Priest
 
     [SerializeField] GameObject priestSad;
     [SerializeField] GameObject priestHappy;
-    [SerializeField] GameObject secondDialogueForPriest;
+    [SerializeField] Dialogue secondDialogueForPriest;
     
     public void VerifyIfPriestsItemsAreTaken() {
         var itemContainer = ItemContainer.Instance;
@@ -123,7 +121,7 @@ public class NPCHandler : MonoBehaviour
             return;
         }
 
-        priestSad.GetComponent<UseObject>().SetScreenToShow(secondDialogueForPriest);
+        priestSad.GetComponent<UseObject>().SetScreenToShow(secondDialogueForPriest.gameObject);
     }
 
     public void ChangePriestToHappy() {
@@ -135,17 +133,17 @@ public class NPCHandler : MonoBehaviour
 
     [SerializeField] GameObject twinEmployedSad;
     [SerializeField] GameObject twinEmployedHappy;
-    [SerializeField] GameObject secondDialogueForTwinEmployed;
+    [SerializeField] Dialogue secondDialogueForTwinEmployed;
     [SerializeField] GameObject twinJoblessSad;
     [SerializeField] GameObject twinJoblessHappy;
-    [SerializeField] GameObject secondDialogueForTwinJobless;
+    [SerializeField] Dialogue secondDialogueForTwinJobless;
 
     public void TwinEmployedFirstToBeContacted() {
-        twinJoblessSad.GetComponent<UseObject>().SetScreenToShow(secondDialogueForTwinJobless);
+        twinJoblessSad.GetComponent<UseObject>().SetScreenToShow(secondDialogueForTwinJobless.gameObject);
     }
 
     public void TwinJoblessFirstToBeContacted() {
-        twinEmployedSad.GetComponent<UseObject>().SetScreenToShow(secondDialogueForTwinEmployed);
+        twinEmployedSad.GetComponent<UseObject>().SetScreenToShow(secondDialogueForTwinEmployed.gameObject);
     }
 
     public void ChangeTwinJoblessToWalking() {
@@ -167,5 +165,51 @@ public class NPCHandler : MonoBehaviour
     public void UpdateAfterTwinArrivesDestination() {
         IncreaseSongPoints();
     }
+
+    // Tower Entrance
+
+    [SerializeField] Transform towerEntrancePosition;
+    [SerializeField] GameObject towerEntranceSprites;
+    [SerializeField] Dialogue dialogueForTowerEntranceOpening;
+    bool towerEntranceIsOpening = false;
+
+    public void BeforeOpenTowerEntrance() {
+        towerEntranceIsOpening = true;
+        dialogueForTowerEntranceOpening.StartDialogue();
+    }
+
+    public void UpdateOnTowerEntranceDialogueNextSentence() {
+        int currentSentence = dialogueForTowerEntranceOpening.GetCurrentSentenceIndex();
+        if (currentSentence == 1) {
+            dialogueForTowerEntranceOpening.DisableChangeToNextSentence();
+            // Camera following movements disabled
+            // Camera moves to tower entrance
+        }
+    }
+
+    public void OpenTowerEntrance() {
+        if (!towerEntranceIsOpening) {
+            return;
+        }
+        // Blinks original sprite (entrance)
+        // Shows new sprite (open)
+        towerEntranceSprites.SetActive(true);
+        // Camera moves to tower top
+    }
+
+    public void AfterOpenTowerEntrance() {
+        if (!towerEntranceIsOpening) {
+            return;
+        }
+        // Shows a dialogue
+        // Camera moves back to player
+    }
+
+    public void BackToPlayerAfterOpenTowerEntrance() {
+        // Player movements must be enabled
+        // Camera following movements enabled
+        towerEntranceIsOpening = false;
+    }
+
 
 }

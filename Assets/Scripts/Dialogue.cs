@@ -18,8 +18,10 @@ public class Dialogue : MonoBehaviour
     [SerializeField] List<DialogueSentence2> sentences;
     [SerializeField] UnityEvent onStart;
     [SerializeField] UnityEvent onEnd;
+    [SerializeField] UnityEvent onNextSentence;
 
-    private int currentSentence = -1;
+    int currentSentence = -1;
+    bool canChangeToNextSentence = true;
 
     void Awake() {
         foreach (var box in GetComponentsInChildren<DialogeBox>()) {
@@ -43,18 +45,27 @@ public class Dialogue : MonoBehaviour
     }
 
     void NextSentence() {
+        if (!canChangeToNextSentence) {
+            return;
+        }
+
         HideCurrentSentence();
         currentSentence++;
         var sentence = sentences[currentSentence];
         sentence.uiObject.SetActive(true);
         var dialogueBox = sentences[currentSentence].uiObject.GetComponent<DialogeBox>();
         dialogueBox.DisplayText(sentence.text, sentence.sprite);
+        onNextSentence.Invoke();
     }
 
     void HideCurrentSentence() {
         if (currentSentence >= 0 && sentences.Count > 0) {
             sentences[currentSentence].uiObject.SetActive(false);
         }
+    }
+
+    public int GetCurrentSentenceIndex() {
+        return currentSentence;
     }
 
     public void StartDialogue() {
@@ -69,5 +80,13 @@ public class Dialogue : MonoBehaviour
         gameObject.SetActive(false);
         Player.Instance.EnablePlayerMovements();
         onEnd.Invoke();
+    }
+
+    public void EnableChangeToNextSentence() {
+        canChangeToNextSentence = true;
+    }
+
+    public void DisableChangeToNextSentence() {
+        canChangeToNextSentence = false;
     }
 }
