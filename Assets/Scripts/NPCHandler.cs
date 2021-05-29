@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Tilemaps;
 
 public class NPCHandler : MonoBehaviour
 {
@@ -169,12 +170,15 @@ public class NPCHandler : MonoBehaviour
     // Tower Entrance
 
     [SerializeField] Transform towerEntrancePosition;
+    [SerializeField] Transform towerTopPosition;
     [SerializeField] GameObject towerEntranceSprites;
     [SerializeField] Dialogue dialogueForTowerEntranceOpening;
+    [SerializeField] GameObject darkMap;
     bool towerEntranceIsOpening = false;
 
     public void BeforeOpenTowerEntrance() {
         towerEntranceIsOpening = true;
+        darkMap.SetActive(false);
         dialogueForTowerEntranceOpening.StartDialogue();
     }
 
@@ -182,34 +186,32 @@ public class NPCHandler : MonoBehaviour
         int currentSentence = dialogueForTowerEntranceOpening.GetCurrentSentenceIndex();
         if (currentSentence == 1) {
             dialogueForTowerEntranceOpening.DisableChangeToNextSentence();
-            // Camera following movements disabled
-            // Camera moves to tower entrance
+            CameraMovement.Instance.MoveTo(towerEntrancePosition.position);
         }
+        else if (currentSentence == 2) {
+            towerEntranceSprites.SetActive(true);
+        }
+        else if (currentSentence == 3) {
+            dialogueForTowerEntranceOpening.DisableChangeToNextSentence();
+            CameraMovement.Instance.MoveTo(towerTopPosition.position);
+        }
+        else if (currentSentence == 4) {
+            dialogueForTowerEntranceOpening.DisableChangeToNextSentence();
+            CameraMovement.Instance.MoveTo(Player.Instance.transform.position);
+            towerEntranceIsOpening = false;
+        }
+
     }
 
-    public void OpenTowerEntrance() {
+    public void CameraReachedTarget() {
         if (!towerEntranceIsOpening) {
             return;
         }
-        // Blinks original sprite (entrance)
-        // Shows new sprite (open)
-        towerEntranceSprites.SetActive(true);
-        // Camera moves to tower top
+        dialogueForTowerEntranceOpening.EnableChangeToNextSentence();
     }
 
-    public void AfterOpenTowerEntrance() {
-        if (!towerEntranceIsOpening) {
-            return;
-        }
-        // Shows a dialogue
-        // Camera moves back to player
+    public void BackToPlayerAfterTowerOpening() {
+        darkMap.SetActive(true);
     }
-
-    public void BackToPlayerAfterOpenTowerEntrance() {
-        // Player movements must be enabled
-        // Camera following movements enabled
-        towerEntranceIsOpening = false;
-    }
-
 
 }

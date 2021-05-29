@@ -3,13 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
-public class DarkBackground : MonoBehaviour
+public class DarkBackground : Singleton<DarkBackground>
 {
     [SerializeField] Tilemap DarkMap;
     [SerializeField] Tilemap BlurredMap;
     [SerializeField] Tilemap BackgroundMap;
     [SerializeField] Tile DarkTile;
     [SerializeField] Tile BlurredTile;
+
+    // Prevent non-singleton constructor use.
+    protected DarkBackground() { }
 
     // Start is called before the first frame update
     void Start()

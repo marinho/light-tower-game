@@ -1,15 +1,24 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
-public class CameraMovement : MonoBehaviour
+public class CameraMovement : Singleton<CameraMovement>
 {
-    [SerializeField] bool isFollowingTarget;
 
     [SerializeField] Transform target;
     [SerializeField] float smoothing = .1f;
     [SerializeField] Vector2 maxPosition;
     [SerializeField] Vector2 minPosition;
+    [SerializeField] UnityEvent onArriveDestination;
+    [SerializeField] float speed;
+
+    Vector3 destinationPosition;
+    bool isMoving;
+    bool isFollowingTarget = true;
+
+    // Prevent non-singleton constructor use.
+    protected CameraMovement() { }
 
     // [HideInInspector]
 
@@ -33,11 +42,40 @@ public class CameraMovement : MonoBehaviour
         }
     }
     
+    // Update is called once per frame
+    void Update()
+    {
+        if (isMoving) {
+            transform.position = Vector3.MoveTowards(
+                transform.position,
+                destinationPosition,
+                speed * Time.deltaTime
+            );
+
+            if (transform.position.x == destinationPosition.x) {
+                StopMoving();
+            }
+        }
+    }
+
+    private void StopMoving() {
+        isMoving = false;
+        onArriveDestination.Invoke();
+    }
+
     public void EnableFollowingTarget() {
         isFollowingTarget = true;
     }
 
     public void DisableFollowingTarget() {
         isFollowingTarget = false;
+    }
+    
+    public void MoveTo(Vector3 destination) {
+        DisableFollowingTarget();
+
+        transform.rotation = Quaternion.Euler(0, destination.x >= transform.position.x ? 180 : 0, 0);
+        destinationPosition = destination;
+        isMoving = true;
     }
 }
