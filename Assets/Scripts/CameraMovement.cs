@@ -52,7 +52,7 @@ public class CameraMovement : Singleton<CameraMovement>
                 speed * Time.deltaTime
             );
 
-            if (transform.position.x == destinationPosition.x) {
+            if (transform.position.x == destinationPosition.x && transform.position.y == destinationPosition.y) {
                 StopMoving();
             }
         }
@@ -74,8 +74,11 @@ public class CameraMovement : Singleton<CameraMovement>
     public void MoveTo(Vector3 destination) {
         DisableFollowingTarget();
 
-        transform.rotation = Quaternion.Euler(0, destination.x >= transform.position.x ? 180 : 0, 0);
-        destinationPosition = destination;
+        destinationPosition = new Vector3(
+            destination.x,
+            destination.y,
+            transform.position.z
+        );
         isMoving = true;
     }
 }

@@ -10,7 +10,7 @@ public class SongScoreDisplay : Singleton<SongScoreDisplay>
     [SerializeField] [Range(0, 7)] int songsPlaying;
     [SerializeField] Image muteImage;
     [SerializeField] UnityEvent onSongPointsIncrease;
-    [SerializeField] UnityEvent onReachedMaximumSongPoints;
+    [SerializeField] UnityEvent onReachedMaximumSongPointsPlaying;
 
     static float onePointWidth = 62.5f;
     int maximumSongPoints = 7;
@@ -38,14 +38,14 @@ public class SongScoreDisplay : Singleton<SongScoreDisplay>
     public void IncreaseSongPoints() {
         songPoints++;
         onSongPointsIncrease.Invoke();
-
-        if (songPoints == maximumSongPoints) {
-            onReachedMaximumSongPoints.Invoke();
-        }
     }
 
     public void IncreaseSongsPlaying() {
         songsPlaying++;
+
+        if (songPoints == maximumSongPoints && songsPlaying == songPoints) {
+            onReachedMaximumSongPointsPlaying.Invoke();
+        }
     }
 
     public void DecreaseSongsPlaying() {

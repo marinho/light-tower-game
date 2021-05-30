@@ -54,7 +54,7 @@ public class Dialogue : MonoBehaviour
         var sentence = sentences[currentSentence];
         sentence.uiObject.SetActive(true);
         var dialogueBox = sentences[currentSentence].uiObject.GetComponent<DialogeBox>();
-        dialogueBox.DisplayText(sentence.text, sentence.sprite);
+        dialogueBox.DisplayText(sentence.text, sentence.sprite); // FIXME some null object bug in here
         onNextSentence.Invoke();
     }
 

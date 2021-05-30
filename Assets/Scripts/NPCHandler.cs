@@ -173,18 +173,14 @@ public class NPCHandler : MonoBehaviour
     [SerializeField] Transform towerTopPosition;
     [SerializeField] GameObject towerEntranceSprites;
     [SerializeField] Dialogue dialogueForTowerEntranceOpening;
-    [SerializeField] GameObject darkMap;
+    [SerializeField] GameObject cameraLightSpot;
     bool towerEntranceIsOpening = false;
-
-    public void BeforeOpenTowerEntrance() {
-        towerEntranceIsOpening = true;
-        darkMap.SetActive(false);
-        dialogueForTowerEntranceOpening.StartDialogue();
-    }
 
     public void UpdateOnTowerEntranceDialogueNextSentence() {
         int currentSentence = dialogueForTowerEntranceOpening.GetCurrentSentenceIndex();
         if (currentSentence == 1) {
+            towerEntranceIsOpening = true;
+            cameraLightSpot.SetActive(true);
             dialogueForTowerEntranceOpening.DisableChangeToNextSentence();
             CameraMovement.Instance.MoveTo(towerEntrancePosition.position);
         }
@@ -211,7 +207,7 @@ public class NPCHandler : MonoBehaviour
     }
 
     public void BackToPlayerAfterTowerOpening() {
-        darkMap.SetActive(true);
+        cameraLightSpot.SetActive(false);
     }
 
 }
