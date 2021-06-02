@@ -8,6 +8,7 @@ TagManager:
   - CanGoDown
   - Grandma Item
   - Priest Item
+  - Tower Entrance
   layers:
   - Default
   - TransparentFX

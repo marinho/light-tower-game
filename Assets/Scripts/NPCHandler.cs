@@ -4,8 +4,11 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Tilemaps;
 
-public class NPCHandler : MonoBehaviour
+public class NPCHandler : Singleton<NPCHandler>
 {
+
+    // Prevent non-singleton constructor use.
+    protected NPCHandler() { }
 
     public void IncreaseSongPoints() {
         SongScoreDisplay.Instance.IncreaseSongPoints();
@@ -175,6 +178,7 @@ public class NPCHandler : MonoBehaviour
     [SerializeField] Dialogue dialogueForTowerEntranceOpening;
     [SerializeField] GameObject cameraLightSpot;
     bool towerEntranceIsOpening = false;
+    public bool towerEntranceIsReady = false;
 
     public void UpdateOnTowerEntranceDialogueNextSentence() {
         int currentSentence = dialogueForTowerEntranceOpening.GetCurrentSentenceIndex();
@@ -195,6 +199,7 @@ public class NPCHandler : MonoBehaviour
             dialogueForTowerEntranceOpening.DisableChangeToNextSentence();
             CameraMovement.Instance.MoveTo(Player.Instance.transform.position);
             towerEntranceIsOpening = false;
+            towerEntranceIsReady = true;
         }
 
     }
@@ -208,6 +213,20 @@ public class NPCHandler : MonoBehaviour
 
     public void BackToPlayerAfterTowerOpening() {
         cameraLightSpot.SetActive(false);
+        CameraMovement.Instance.EnableFollowingTarget();
+    }
+
+    public void MovePlayerToTowerTop() {
+        Player.Instance.transform.position = towerTopPosition.position;
+    }
+
+    // Dark spirit
+    [SerializeField] NPC darkSpirit;
+
+    public void SendDarkSpiritAway() {
+        // TODO: animation
+        darkSpirit.gameObject.SetActive(false);
+        DarkBackground.Instance.DarkMap.gameObject.SetActive(false);
     }
 
 }

@@ -28,6 +28,7 @@ public class Player : Singleton<Player>
     private float jumpTimeCounter;
     bool movementIsEnabled = true;
     private Collider2D currentGround;
+    bool towerEntranceInRange = false;
 
     // Prevent non-singleton constructor use.
     protected Player() { }
@@ -60,6 +61,8 @@ public class Player : Singleton<Player>
 
             if (currentGround.CompareTag("CanGoDown") && Input.GetAxisRaw("Vertical") < 0) {
                 currentGround.enabled = false;
+            } else if (towerEntranceInRange && Input.GetAxisRaw("Vertical") > 0) {
+                NPCHandler.Instance.MovePlayerToTowerTop();
             }
         }
 
@@ -91,10 +94,6 @@ public class Player : Singleton<Player>
             else if (Input.GetButtonUp("Attack")) {
                 currentWeapon.GetComponent<Animator>().SetBool("isActive", false);
             }
-        }
-
-        if (Input.GetButtonDown("Use")) {
-            // TODO
         }
     }
 
@@ -137,6 +136,22 @@ public class Player : Singleton<Player>
         animator.SetBool("isFalling", false);
         animator.SetBool("isJumping", false);
         animator.SetBool("isMoving", false);
+    }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Tower Entrance"))
+        {
+            towerEntranceInRange = NPCHandler.Instance.towerEntranceIsReady;
+        }
+    }
+
+    void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.CompareTag("Tower Entrance"))
+        {
+            towerEntranceInRange = false;
+        }
     }
 
 }

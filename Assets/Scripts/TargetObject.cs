@@ -15,8 +15,12 @@ public class TargetObject : MonoBehaviour
     }
 
     public void Attack() {
+        if (lightSpot.gameObject.activeInHierarchy) {
+            return;
+        }
         lightSpot.gameObject.SetActive(true);
         objectToShowAfterAttack.gameObject.SetActive(true);
         onAttack.Invoke();
+        LightsHandler.Instance.IncreaseLightsOnCount();
     }
 }

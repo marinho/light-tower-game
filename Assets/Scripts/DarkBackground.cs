@@ -5,7 +5,7 @@ using UnityEngine.Tilemaps;
 
 public class DarkBackground : Singleton<DarkBackground>
 {
-    [SerializeField] Tilemap DarkMap;
+    [SerializeField] public Tilemap DarkMap;
     [SerializeField] Tilemap BlurredMap;
     [SerializeField] Tilemap BackgroundMap;
     [SerializeField] Tile DarkTile;
@@ -29,9 +29,4 @@ public class DarkBackground : Singleton<DarkBackground>
         }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
 }
