@@ -159,14 +159,12 @@ public class NPCHandler : Singleton<NPCHandler>
         var animator = twinWalking.GetComponent<Animator>();
 
         var walkToPosition = new Vector3(
-            destination.position.x,
+            destination.position.x + 1,
             twinWalking.transform.position.y,
             twinWalking.transform.position.z
         );
-        twinWalking.GetComponent<Walker>().WalkTo(walkToPosition);
-    }
-
-    public void UpdateAfterTwinArrivesDestination() {
+        // twinWalking.GetComponent<Walker>().WalkTo(walkToPosition);
+        twinWalking.transform.position = walkToPosition;
         IncreaseSongPoints();
     }
 
