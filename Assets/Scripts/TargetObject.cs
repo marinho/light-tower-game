@@ -23,4 +23,8 @@ public class TargetObject : MonoBehaviour
         onAttack.Invoke();
         LightsHandler.Instance.IncreaseLightsOnCount();
     }
+
+    public bool CanBeAttacked() {
+        return !lightSpot.gameObject.activeInHierarchy;
+    }
 }

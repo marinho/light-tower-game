@@ -23,8 +23,10 @@ public class Weapon : MonoBehaviour
         }
         attackedTarget = targetsInRange[0];
 
-        attackEffectClone = Instantiate(attackEffect, attackEffectOrigin.position, Quaternion.identity);
-        attackEffectClone.SetActive(true);
+        if (attackedTarget.GetComponent<TargetObject>().CanBeAttacked()) {
+            attackEffectClone = Instantiate(attackEffect, attackEffectOrigin.position, Quaternion.identity);
+            attackEffectClone.SetActive(true);
+        }
     }
 
     void Update() {
