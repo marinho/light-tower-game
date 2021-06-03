@@ -30,7 +30,7 @@ public class Weapon : MonoBehaviour
     }
 
     void Update() {
-        if (attackedTarget != null && attackEffect != null) {
+        if (attackedTarget != null && attackEffectClone != null) {
             if (attackEffectClone.transform.position != attackedTarget.transform.position) {
                 attackEffectClone.transform.position = Vector3.MoveTowards(
                     attackEffectClone.transform.position,
