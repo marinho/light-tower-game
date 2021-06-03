@@ -159,7 +159,7 @@ public class NPCHandler : Singleton<NPCHandler>
         var animator = twinWalking.GetComponent<Animator>();
 
         var walkToPosition = new Vector3(
-            destination.position.x + 1,
+            destination.position.x + 3,
             twinWalking.transform.position.y,
             twinWalking.transform.position.z
         );
@@ -224,7 +224,7 @@ public class NPCHandler : Singleton<NPCHandler>
     public void SendDarkSpiritAway() {
         // TODO: animation
         darkSpirit.gameObject.SetActive(false);
-        DarkBackground.Instance.DarkMap.gameObject.SetActive(false);
+        DarkBackground.Instance.HideDarkness();
     }
 
 }

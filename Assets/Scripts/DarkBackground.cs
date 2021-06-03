@@ -5,7 +5,7 @@ using UnityEngine.Tilemaps;
 
 public class DarkBackground : Singleton<DarkBackground>
 {
-    [SerializeField] public Tilemap DarkMap;
+    [SerializeField] Tilemap DarkMap;
     [SerializeField] Tilemap BlurredMap;
     [SerializeField] Tilemap BackgroundMap;
     [SerializeField] Tile DarkTile;
@@ -27,6 +27,11 @@ public class DarkBackground : Singleton<DarkBackground>
         foreach (Vector3Int p in BlurredMap.cellBounds.allPositionsWithin) {
             BlurredMap.SetTile(p, BlurredTile);
         }
+    }
+
+    public void HideDarkness() {
+        DarkMap.gameObject.SetActive(false);
+        BlurredMap.gameObject.SetActive(false);
     }
 
 }
