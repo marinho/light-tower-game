@@ -198,6 +198,8 @@ public class NPCHandler : Singleton<NPCHandler>
             CameraMovement.Instance.MoveTo(Player.Instance.transform.position);
             towerEntranceIsOpening = false;
             towerEntranceIsReady = true;
+            var towerEntranceUse = towerEntrancePosition.gameObject.GetComponent<UseObject>();
+            towerEntranceUse.SetActive(true);
         }
 
     }

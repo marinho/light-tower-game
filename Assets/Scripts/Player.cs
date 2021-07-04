@@ -61,8 +61,8 @@ public class Player : Singleton<Player>
 
             if (currentGround.CompareTag("CanGoDown") && Input.GetAxisRaw("Vertical") < 0) {
                 currentGround.enabled = false;
-            } else if (towerEntranceInRange && Input.GetAxisRaw("Vertical") > 0) {
-                NPCHandler.Instance.MovePlayerToTowerTop();
+            // } else if (towerEntranceInRange && Input.GetAxisRaw("Vertical") > 0) {
+            //     NPCHandler.Instance.MovePlayerToTowerTop();
             }
         }
 
