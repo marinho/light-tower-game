@@ -220,11 +220,16 @@ public class NPCHandler : Singleton<NPCHandler>
 
     // Dark spirit
     [SerializeField] NPC darkSpirit;
+    [SerializeField] List<GameObject> objectsToHideAtTheEnd;
 
     public void SendDarkSpiritAway() {
         // TODO: animation
         darkSpirit.gameObject.SetActive(false);
         DarkBackground.Instance.HideDarkness();
+        foreach (var item in objectsToHideAtTheEnd)
+        {
+            item.SetActive(false);
+        }
     }
 
 }
