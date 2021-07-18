@@ -18,6 +18,7 @@ public class Player : Singleton<Player>
     [SerializeField] float jumpTime;
     [SerializeField] Transform respawnLocation;
     [SerializeField] WeaponHandler weaponHandler;
+    [SerializeField] GameObject escapeScreen;
 
     //private PlayerState currentState = PlayerState.idle;
     private float moveInput;
@@ -43,6 +44,15 @@ public class Player : Singleton<Player>
     }
 
     void Update() {
+        if (Input.GetButtonDown("Cancel")) {
+            escapeScreen.SetActive(!escapeScreen.activeInHierarchy);
+            if (escapeScreen.activeInHierarchy) {
+                EnablePlayerMovements();
+            } else {
+                DisablePlayerMovements();
+            }
+        }
+
         weaponHandler.gameObject.SetActive(weaponHandler.currentWeapon != null);
 
         if (!movementIsEnabled) {
