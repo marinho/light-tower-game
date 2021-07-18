@@ -27,4 +27,8 @@ public class SceneUtils : MonoBehaviour
             yield return null;
         }
     }
+
+    public void Quit() {
+        Application.Quit();
+    }
 }
