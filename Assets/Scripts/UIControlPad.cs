@@ -14,19 +14,15 @@ public class UIControlPad : MonoBehaviour
     private bool triangleIsEnabled = true; // Jump is always enabled
     private bool circleIsEnabled = false;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
     void Update()
     {
-        controlSquare.GetComponent<Animator>().SetBool("isEnabled", squareIsEnabled);
-        controlX.GetComponent<Animator>().SetBool("isEnabled", xIsEnabled);
-        controlTriangle.GetComponent<Animator>().SetBool("isEnabled", triangleIsEnabled);
-        controlCircle.GetComponent<Animator>().SetBool("isEnabled", circleIsEnabled);
+        int keyboardFactor = UniversalInput.Instance.GetUsingKeyboard() ? 2 : 0;
+        int isOff = 1 + keyboardFactor;
+        int isOn = 2 + keyboardFactor;
+        controlSquare.GetComponent<Animator>().SetInteger("state", squareIsEnabled ? isOn : isOff);
+        controlX.GetComponent<Animator>().SetInteger("state", xIsEnabled ? isOn : isOff);
+        controlTriangle.GetComponent<Animator>().SetInteger("state", triangleIsEnabled ? isOn : isOff);
+        controlCircle.GetComponent<Animator>().SetInteger("state", circleIsEnabled ? isOn : isOff);
     }
 
     public void SetSquareEnabled(bool enable) {

@@ -22,11 +22,16 @@ public class Dialogue : MonoBehaviour
 
     int currentSentence = -1;
     bool canChangeToNextSentence = true;
+    UniversalInput universalInput;
 
     void Awake() {
         foreach (var box in GetComponentsInChildren<DialogeBox>()) {
             box.gameObject.SetActive(false);
         }
+    }
+
+    void Start() {
+        universalInput = UniversalInput.Instance;
     }
 
     void Update()
@@ -35,7 +40,7 @@ public class Dialogue : MonoBehaviour
             return;
         }
 
-        if (Input.GetButtonUp("Talk")) {
+        if (universalInput.GetButtonUp("Talk")) {
             if (sentences.Count > currentSentence + 1) {
                 NextSentence();
             } else {

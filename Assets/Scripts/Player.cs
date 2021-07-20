@@ -14,7 +14,7 @@ public class Player : Singleton<Player>
     [SerializeField] Transform feetPosition;
     [SerializeField] float checkRadius;
     [SerializeField] LayerMask whatIsGround;
-    [SerializeField]  float jumpForce;
+    [SerializeField] float jumpForce;
     [SerializeField] float jumpTime;
     [SerializeField] Transform respawnLocation;
     [SerializeField] WeaponHandler weaponHandler;
@@ -30,6 +30,7 @@ public class Player : Singleton<Player>
     bool movementIsEnabled = true;
     private Collider2D currentGround;
     bool towerEntranceInRange = false;
+    UniversalInput universalInput;
 
     // Prevent non-singleton constructor use.
     protected Player() { }
@@ -38,18 +39,19 @@ public class Player : Singleton<Player>
     {
         rigidBody = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        universalInput = GetComponent<UniversalInput>();
 
         // FIXME: it's not working
         transform.position = Vector3.MoveTowards(transform.position, respawnLocation.position, 0);
     }
 
     void Update() {
-        if (Input.GetButtonDown("Cancel")) {
+        if (universalInput.GetButtonDown("Cancel")) {
             escapeScreen.SetActive(!escapeScreen.activeInHierarchy);
             if (escapeScreen.activeInHierarchy) {
-                EnablePlayerMovements();
-            } else {
                 DisablePlayerMovements();
+            } else {
+                EnablePlayerMovements();
             }
         }
 
@@ -69,20 +71,22 @@ public class Player : Singleton<Player>
 
             currentGround = newGround;
 
-            if (currentGround.CompareTag("CanGoDown") && Input.GetAxisRaw("Vertical") < 0) {
-                currentGround.enabled = false;
+            if (currentGround.CompareTag("CanGoDown")) {
+                if (universalInput.GetAxisVertical() < 0) {
+                    currentGround.enabled = false;
+                }
             // } else if (towerEntranceInRange && Input.GetAxisRaw("Vertical") > 0) {
             //     NPCHandler.Instance.MovePlayerToTowerTop();
             }
         }
 
-        if (isGrounded && Input.GetButtonDown("Jump")) {
+        if (isGrounded && universalInput.GetButtonDown("Jump")) {
             isJumping = true;
             jumpTimeCounter = jumpTime;
             rigidBody.velocity = Vector2.up * jumpForce;
         }
 
-        if (isJumping && Input.GetButton("Jump")) {
+        if (isJumping && universalInput.GetButton("Jump")) {
             if (jumpTimeCounter > 0) {
                 rigidBody.velocity = Vector2.up * jumpForce;
                 jumpTimeCounter -= Time.deltaTime;
@@ -91,17 +95,17 @@ public class Player : Singleton<Player>
             }
         }
 
-        if (Input.GetButtonUp("Jump")) {
+        if (universalInput.GetButtonUp("Jump")) {
             isJumping = false;
         }
 
         var currentWeapon = weaponHandler.GetCurrentWeapon();
         if (currentWeapon != null) {
-            if (Input.GetButtonDown("Attack")) {
+            if (universalInput.GetButtonDown("Attack")) {
                 currentWeapon.GetComponent<Animator>().SetBool("isActive", true);
                 currentWeapon.GetComponent<Weapon>().AttackFirstTarget();
             }
-            else if (Input.GetButtonUp("Attack")) {
+            else if (universalInput.GetButtonUp("Attack")) {
                 currentWeapon.GetComponent<Animator>().SetBool("isActive", false);
             }
         }
@@ -113,7 +117,7 @@ public class Player : Singleton<Player>
             return;
         }
 
-        moveInput = Input.GetAxisRaw("Horizontal");
+        moveInput = universalInput.GetAxisHorizontal();
 
         animator.SetBool("isFalling", rigidBody.velocity.y < -0.1f);
         animator.SetBool("isJumping", rigidBody.velocity.y > 0.1f);

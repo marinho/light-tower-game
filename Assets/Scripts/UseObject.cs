@@ -21,8 +21,11 @@ public class UseObject : MonoBehaviour
     private bool playerInRange = false;
     private Material initialMaterial;
     private string inputButtonKey;
+    UniversalInput universalInput;
 
     void Start() {
+        universalInput = UniversalInput.Instance;
+
         if (inputButton == ControlPadInputButton.Talk) {
             inputButtonKey = "Talk";
         } else {
@@ -32,7 +35,7 @@ public class UseObject : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetButtonUp(inputButtonKey) && playerInRange)
+        if (universalInput.GetButtonUp(inputButtonKey) && playerInRange)
         {
             Use();
         }
