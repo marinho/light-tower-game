@@ -166,6 +166,7 @@ public class NPCHandler : Singleton<NPCHandler>
         // twinWalking.GetComponent<Walker>().WalkTo(walkToPosition);
         twinWalking.transform.position = walkToPosition;
         IncreaseSongPoints();
+        QuestLog.Instance.SetQuestCheck("Twin Sisters Quest Check");
     }
 
     // Tower Entrance
