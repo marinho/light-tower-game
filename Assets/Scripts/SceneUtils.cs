@@ -31,4 +31,8 @@ public class SceneUtils : MonoBehaviour
     public void Quit() {
         Application.Quit();
     }
+
+    public void OpenURL(string url) {
+        Application.OpenURL(url);
+    }
 }
